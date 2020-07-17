@@ -1,0 +1,118 @@
+ibge;uf;nome_cidade;longitude;latitude;regiao
+3201209;ES;Cachoeiro de Itapemirim;-411.119.188.104;-208.501.123.497;Sul Esprito-Santense
+3201308;ES;Cariacica;-403.905.591.047;-202.946.777.965;Central Esprito-Santense
+3201407;ES;Castelo;-41.202.212.704;-206.020.650.861;Sul Esprito-Santense
+3201506;ES;Colatina;-40.630.317.554;-195.362.700.836;Noroeste Esprito-Santense
+3201605;ES;Conceicao da Barra;-397.274.744.194;-185.984.623.009;Litoral Norte Esprito-Santense
+3201704;ES;Conceicao do Castelo;-412.453.480.412;-203.655.811.138;Central Esprito-Santense
+3201803;ES;Divino de Sao Lourenco;-416.799.763.283;-206.204.706.519;Sul Esprito-Santense
+3201902;ES;Domingos Martins;-406.593.963.546;-203.642.385.224;Central Esprito-Santense
+3202009;ES;Dores do Rio Preto;-418.495.773.625;-206.928.939.053;Sul Esprito-Santense
+3202108;ES;Ecoporanga;-408.300.811.593;-183.752.523.795;Noroeste Esprito-Santense
+3202207;ES;Fundao;-40.403.765.444;-199.334.471.177;Litoral Norte Esprito-Santense
+3202256;ES;Governador Lindenberg;-404.577.660.614;-192.528.074.444;Noroeste Esprito-Santense
+3202306;ES;Guacui;-416.794.962.927;-207.753.378.053;Sul Esprito-Santense
+3202405;ES;Guarapari;-404.950.210.195;-206.659.745.796;Central Esprito-Santense
+3202454;ES;Ibatiba;-415.072.079.995;-202.340.203.463;Sul Esprito-Santense
+3202504;ES;Ibiracu;-403.716.661.789;-198.318.799.981;Litoral Norte Esprito-Santense
+3202553;ES;Ibitirama;-416.594.124.009;-205.387.309.666;Sul Esprito-Santense
+3202603;ES;Iconha;-408.112.210.453;-207.971.447.539;Central Esprito-Santense
+3202652;ES;Irupi;-416.475.278.615;-203.485.970.393;Sul Esprito-Santense
+3202702;ES;Itaguacu;-408.565.984.866;-198.025.077.112;Central Esprito-Santense
+3202801;ES;Itapemirim;-408.361.451.168;-210.110.996.273;Sul Esprito-Santense
+3202900;ES;Itarana;-408.797.910.822;-19.872.348.006;Central Esprito-Santense
+3203007;ES;Iuna;-415.328.886.935;-203.485.995.138;Sul Esprito-Santense
+3204559;ES;Santa Maria de Jetiba;-407.416.178.006;-200.288.140.582;Central Esprito-Santense
+3204609;ES;Santa Teresa;-405.989.977.217;-199.377.143.169;Central Esprito-Santense
+3204658;ES;Sao Domingos do Norte;-406.218.777.327;-1.914.816.851;Noroeste Esprito-Santense
+3204708;ES;Sao Gabriel da Palha;-405.295.995.076;-190.219.647.532;Noroeste Esprito-Santense
+3204807;ES;Sao Jose do Calcado;-416.560.878.498;-210.261.302.467;Sul Esprito-Santense
+3204906;ES;Sao Mateus;-398.582.005.956;-187.184.469.679;Litoral Norte Esprito-Santense
+3204955;ES;Sao Roque do Canaa;-406.431.387.555;-197.253.072.048;Central Esprito-Santense
+3205002;ES;Serra;-402.752.170.367;-201.567.698.424;Central Esprito-Santense
+3205010;ES;Sooretama;-400.964.908.071;-191.919.496.279;Litoral Norte Esprito-Santense
+3205036;ES;Vargem Alta;-410.071.483.602;-206.716.781.988;Sul Esprito-Santense
+3205069;ES;Venda Nova do Imigrante;-411.290.532.111;-203.315.181.774;Central Esprito-Santense
+3205101;ES;Viana;-404.956.243.355;-203.908.625.112;Central Esprito-Santense
+3205150;ES;Vila Pavao;-406.024.114.108;-186.208.034.523;Noroeste Esprito-Santense
+3205176;ES;Vila Valerio;-403.905.897.774;-189.936.174.389;Noroeste Esprito-Santense
+3205200;ES;Vila Velha;-402.939.566.369;-203.383.741.042;Central Esprito-Santense
+3205309;ES;Vitoria;-403.222.087.267;-203.201.537.929;Central Esprito-Santense
+3300100;RJ;Angra dos Reis;-443.196.272.623;-230.091.159.353;Sul Fluminense
+3300159;RJ;Aperibe;-421.049.166.541;-216.194.217.698;Noroeste Fluminense
+3300209;RJ;Araruama;-423.410.960.232;-228.774.383.874;Baixadas
+3300225;RJ;Areal;-431.010.698.052;-222.369.120.036;Centro Fluminense
+3300233;RJ;Armacao dos Buzios;-418.877.494.681;-227.577.637.929;Baixadas
+3300258;RJ;Arraial do Cabo;-420.283.359.676;-229.676.382.776;Baixadas
+3300308;RJ;Barra do Pirai;-438.284.524.538;-224.695.962.921;Sul Fluminense
+3300407;RJ;Barra Mansa;-441.724.313.737;-225.453.011.339;Sul Fluminense
+3300456;RJ;Belford Roxo;-433.996.249.708;-227.645.559.675;Metropolitana do Rio de Janeiro
+3300506;RJ;Bom Jardim;-424.172.114.823;-221.533.052.283;Centro Fluminense
+3300605;RJ;Bom Jesus do Itabapoana;-41.677.679.795;-211.344.974.419;Noroeste Fluminense
+3300704;RJ;Cabo Frio;-420.200.748.019;-228.807.646.671;Baixadas
+3300803;RJ;Cachoeiras de Macacu;-426.631.643.573;-224.675.708.722;Metropolitana do Rio de Janeiro
+3300902;RJ;Cambuci;-419.086.360.047;-215.772.767.097;Noroeste Fluminense
+3300936;RJ;Carapebus;-416.640.105.959;-221.825.947.274;Norte Fluminense
+3300951;RJ;Comendador Levy Gasparian;-432.172.237.156;-220.333.589.384;Centro Fluminense
+3301009;RJ;Campos dos Goytacazes;-413.304.764.919;-217.518.986.321;Norte Fluminense
+3301108;RJ;Cantagalo;-42.365.977.599;-219.818.398.588;Centro Fluminense
+3301157;RJ;Cardoso Moreira;-416.132.963.462;-214.961.573.567;Norte Fluminense
+3301207;RJ;Carmo;-426.097.176.407;-219.293.117.801;Centro Fluminense
+3301306;RJ;Casimiro de Abreu;-422.042.105.444;-224.795.365.026;Baixadas
+3301405;RJ;Conceicao de Macabu;-418.677.585.057;-220.878.715.265;Norte Fluminense
+3301504;RJ;Cordeiro;-423.630.305.379;-220.277.765.631;Centro Fluminense
+3301603;RJ;Duas Barras;-425.150.976.315;-220.589.060.899;Centro Fluminense
+3301702;RJ;Duque de Caxias;-433.098.880.717;-227.852.532.497;Metropolitana do Rio de Janeiro
+3301801;RJ;Engenheiro Paulo de Frontin;-43.679.476.829;-225.436.846.647;Metropolitana do Rio de Janeiro
+3301850;RJ;Guapimirim;-429.783.297.043;-225.195.957.941;Metropolitana do Rio de Janeiro
+3301876;RJ;Iguaba Grande;-422.221.245.423;-228.390.569.837;Baixadas
+3301900;RJ;Itaborai;-428.603.434.262;-227.458.630.174;Metropolitana do Rio de Janeiro
+3302007;RJ;Itaguai;-437.750.406.349;-228.712.507.684;Metropolitana do Rio de Janeiro
+3302056;RJ;Italva;-416.909.647.605;-21.425.103.278;Noroeste Fluminense
+3302106;RJ;Itaocara;-420.777.295.246;-216.705.026.733;Noroeste Fluminense
+3302205;RJ;Itaperuna;-418.862.031.767;-212.105.910.848;Noroeste Fluminense
+3302254;RJ;Itatiaia;-445.627.719.942;-224.970.145.997;Sul Fluminense
+3302270;RJ;Japeri;-43.653.785.801;-226.448.185.711;Metropolitana do Rio de Janeiro
+3302304;RJ;Laje do Muriae;-421.311.744.192;-212.057.208.352;Noroeste Fluminense
+3302403;RJ;Macae;-417.750.642.855;-223.687.049.744;Norte Fluminense
+5003488;MS;Dois Irmaos do Buriti;-552.819.144.863;-206.923.120.582;Pantanais Sul Mato-Grossense
+5003504;MS;Douradina;-546.079.306.686;-22.045.530.282;Sudoeste de Mato Grosso do Sul
+5003702;MS;Dourados;-548.112.891.229;-222.272.355.369;Sudoeste de Mato Grosso do Sul
+5003751;MS;Eldorado;-542.800.282.489;-237.740.539.201;Sudoeste de Mato Grosso do Sul
+5003801;MS;Fatima do Sul;-545.163.759.902;-223.754.232.111;Sudoeste de Mato Grosso do Sul
+5003900;MS;Figueirao;-536.425.733.239;-186.754.480.708;Centro Norte de Mato Grosso do Sul
+5004007;MS;Gloria de Dourados;-542.346.287.899;-22.414.424.531;Sudoeste de Mato Grosso do Sul
+5004106;MS;Guia Lopes da Laguna;-561.081.525.022;-214.524.591.422;Sudoeste de Mato Grosso do Sul
+5004304;MS;Iguatemi;-545.586.010.866;-236.619.015.645;Sudoeste de Mato Grosso do Sul
+5004403;MS;Inocencia;-519.276.790.223;-19.725.457.974;Leste de Mato Grosso do Sul
+5004502;MS;Itapora;-547.956.587.373;-220.824.475.602;Sudoeste de Mato Grosso do Sul
+5004601;MS;Itaquirai;-541.881.983.027;-234.906.632.623;Sudoeste de Mato Grosso do Sul
+5004700;MS;Ivinhema;-538.269.701.471;-223.016.035.627;Sudoeste de Mato Grosso do Sul
+5004809;MS;Japora;-544.034.847.429;-238.940.669.515;Sudoeste de Mato Grosso do Sul
+5004908;MS;Jaraguari;-544.406.839.539;-201.037.403.917;Centro Norte de Mato Grosso do Sul
+5005004;MS;Jardim;-561.458.445.844;-214.796.031.458;Sudoeste de Mato Grosso do Sul
+5005103;MS;Jatei;-543.080.543.756;-224.816.870.305;Sudoeste de Mato Grosso do Sul
+5005152;MS;Juti;-546.013.228.313;-228.624.718.344;Sudoeste de Mato Grosso do Sul
+5005202;MS;Ladario;-576.024.001.955;-19.001.775.668;Pantanais Sul Mato-Grossense
+5005251;MS;Laguna Carapa;-551.501.077.345;-225.505.815.145;Sudoeste de Mato Grosso do Sul
+5005400;MS;Maracaju;-55.157.139.569;-216.236.103.838;Sudoeste de Mato Grosso do Sul
+5005608;MS;Miranda;-563.901.982.861;-20.239.333.499;Pantanais Sul Mato-Grossense
+5005681;MS;Mundo Novo;-542.816.614.238;-239.352.736.182;Sudoeste de Mato Grosso do Sul
+5005707;MS;Navirai;-541.988.361.701;-230.599.994.825;Sudoeste de Mato Grosso do Sul
+5005806;MS;Nioaque;-558.338.899.214;-211.581.523.135;Sudoeste de Mato Grosso do Sul
+5006002;MS;Nova Alvorada do Sul;-543.828.036.001;-214.666.342.525;Sudoeste de Mato Grosso do Sul
+5006200;MS;Nova Andradina;-533.515.738.149;-222.487.593.128;Leste de Mato Grosso do Sul
+5006259;MS;Novo Horizonte do Sul;-53.860.886.557;-226.549.531.056;Sudoeste de Mato Grosso do Sul
+5006309;MS;Paranaiba;-511.887.077.084;-196.773.717.332;Leste de Mato Grosso do Sul
+5006358;MS;Paranhos;-554.330.304.574;-238.968.696.615;Sudoeste de Mato Grosso do Sul
+5006408;MS;Pedro Gomes;-545.524.458.292;-181.018.562.343;Centro Norte de Mato Grosso do Sul
+5006606;MS;Ponta Pora;-557.108.501.779;-224.861.870.788;Sudoeste de Mato Grosso do Sul
+5006903;MS;Porto Murtinho;-578.884.823.023;-217.073.245.588;Pantanais Sul Mato-Grossense
+5007109;MS;Ribas do Rio Pardo;-537.616.776.243;-204.436.755.256;Leste de Mato Grosso do Sul
+5220058;GO;Sao Joao da Parauna;-504.050.629.925;-168.145.235.535;Sul Goiano
+5220108;GO;Sao Luis de Montes Belos;-503.742.880.027;-165.198.101.598;Centro Goiano
+5220157;GO;Sao Luiz do Norte;-493.319.358.806;-148.620.789.113;Centro Goiano
+5220207;GO;Sao Miguel do Araguaia;-501.638.382.701;-13.276.024.343;Noroeste Goiano
+5220264;GO;Sao Miguel do Passa Quatro;-486.647.175.594;-170.509.343.499;Sul Goiano
+5220280;GO;Sao Patricio;-498.163.460.405;-153.524.896.722;Centro Goiano
+5220405;GO;Sao Simao;-505.496.997.577;-189.897.385.995;Sul Goiano
