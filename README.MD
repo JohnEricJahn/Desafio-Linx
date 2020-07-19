@@ -3,7 +3,7 @@
 </h2>
 
 <h1 align="center"> 
-	Desafio Linx
+Desafio Linx
 </h1>
 
 <p align="center">	
