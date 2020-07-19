@@ -52,11 +52,26 @@ function Create() {
           .positive('IBGE precisa ser um número inteiro positivo'),
         uf: Yup.string()
           .required('UF é obrigatório')
-          .length(2, 'UF precisa ter dois caracteres'),
-        nome_cidade: Yup.string().required('Cidade é obrigatório'),
-        regiao: Yup.string().required('Regiao é obrigatório'),
-        latitude: Yup.string().required('Latitude é obrigatório'),
-        longitude: Yup.string().required('Longitude é obrigatório'),
+          .length(2, 'UF precisa ter dois caracteres')
+          .matches(/^[A-Z]+$/, 'UF precisa ter dois caracteres MAIÚSCULOS'),
+        nome_cidade: Yup.string()
+          .required('Cidade é obrigatório')
+          .matches(
+            /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/,
+            'Digite apenas caracteres válidos',
+          ),
+        regiao: Yup.string()
+          .required('Regiao é obrigatório')
+          .matches(
+            /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/,
+            'Digite apenas caracteres válidos',
+          ),
+        latitude: Yup.number()
+          .typeError('Latitude precisa ser um número')
+          .required('Latitude é obrigatório'),
+        longitude: Yup.number()
+          .typeError('Longitude precisa ser um número')
+          .required('Longitude é obrigatório'),
       });
 
       await schema.validate(data, {
