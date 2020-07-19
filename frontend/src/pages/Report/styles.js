@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
 `;
 export const Wrapper = styled.div`
-  width: 50%;
+  width: 1100px;
   height: 200px;
   background: #fff;
 

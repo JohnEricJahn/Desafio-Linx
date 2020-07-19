@@ -64,13 +64,13 @@ export const TableContainer = styled.section`
     th {
       color: #969cb3;
       font-weight: normal;
-      padding: 20px 32px;
+      padding: 7px 15px;
       font-size: 16px;
       line-height: 24px;
     }
 
     td {
-      padding: 20px 32px;
+      padding: 10px 32px;
       border: 0;
       background: #fff;
       font-size: 16px;

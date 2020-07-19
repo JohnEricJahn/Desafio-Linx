@@ -155,6 +155,7 @@ function Home() {
           <table>
             <thead>
               <tr>
+                <th>INDEX</th>
                 <th>IBGE</th>
                 <th>CIDADE</th>
                 <th>UF</th>
@@ -168,15 +169,12 @@ function Home() {
             <tbody>
               {filteredCities !== null
                 ? filteredCities.map(
-                    ({
-                      ibge,
-                      uf,
-                      nome_cidade,
-                      longitude,
-                      latitude,
-                      regiao,
-                    }) => (
+                    (
+                      { ibge, uf, nome_cidade, longitude, latitude, regiao },
+                      index,
+                    ) => (
                       <tr key={ibge}>
+                        <td>{index}</td>
                         <td>{ibge}</td>
                         <td>{nome_cidade}</td>
                         <td>{uf}</td>
@@ -195,15 +193,12 @@ function Home() {
                     ),
                   )
                 : cities.map(
-                    ({
-                      ibge,
-                      uf,
-                      nome_cidade,
-                      longitude,
-                      latitude,
-                      regiao,
-                    }) => (
+                    (
+                      { ibge, uf, nome_cidade, longitude, latitude, regiao },
+                      index,
+                    ) => (
                       <tr key={ibge}>
+                        <td>{index}</td>
                         <td>{ibge}</td>
                         <td>{nome_cidade}</td>
                         <td>{uf}</td>
