@@ -33,6 +33,15 @@ export const Filters = styled.div`
       font-size: 16px;
       color: #6c6c80;
     }
+
+    input {
+      margin-left: 5px;
+      background: #f0f0f5;
+      border-radius: 5px;
+      padding: 10px 5px;
+      font-size: 16px;
+      color: #6c6c80;
+    }
   }
 
   button {

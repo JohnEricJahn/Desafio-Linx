@@ -13,6 +13,7 @@ function Home() {
   const [region, setRegion] = useState([]);
   const [selectedUf, setSelectedUf] = useState('0');
   const [selectedRegion, setSelectedRegion] = useState('0');
+  const [selectedCity, setSelectedCity] = useState('0');
   const [filteredCities, setFilteredCities] = useState(null);
 
   useEffect(() => {
@@ -70,26 +71,75 @@ function Home() {
     setSelectedRegion(selectRegion);
   }
 
+  function handleSelectedCity(event) {
+    const selectCity = event.target.value;
+
+    if (selectCity === '') return setSelectedCity('0');
+
+    return setSelectedCity(selectCity);
+  }
+
   function handleFilter() {
     let filteringCities = [];
 
-    if (selectedUf === '0' && selectedRegion === '0') {
+    if (selectedUf === '0' && selectedRegion === '0' && selectedCity === '0') {
       return setFilteredCities(cities);
     }
-
-    if (selectedUf !== '0' && selectedRegion !== '0') {
+    if (selectedUf !== '0' && selectedRegion !== '0' && selectedCity !== '0') {
+      filteringCities = cities.filter(city => {
+        return (
+          city.uf === selectedUf &&
+          city.regiao === selectedRegion &&
+          city.nome_cidade === selectedCity
+        );
+      });
+    } else if (
+      selectedUf !== '0' &&
+      selectedRegion !== '0' &&
+      selectedCity === '0'
+    ) {
       filteringCities = cities.filter(city => {
         return city.uf === selectedUf && city.regiao === selectedRegion;
       });
-
-      return setFilteredCities(filteringCities);
-    }
-
-    if (selectedUf !== '0')
+    } else if (
+      selectedUf === '0' &&
+      selectedRegion !== '0' &&
+      selectedCity !== '0'
+    ) {
+      filteringCities = cities.filter(city => {
+        return (
+          city.regiao === selectedRegion && city.nome_cidade === selectedCity
+        );
+      });
+    } else if (
+      selectedUf !== '0' &&
+      selectedRegion === '0' &&
+      selectedCity !== '0'
+    ) {
+      filteringCities = cities.filter(city => {
+        return city.uf === selectedUf && city.nome_cidade === selectedCity;
+      });
+    } else if (
+      selectedUf !== '0' &&
+      selectedRegion === '0' &&
+      selectedCity === '0'
+    ) {
       filteringCities = cities.filter(city => city.uf === selectedUf);
-
-    if (selectedRegion !== '0')
+    } else if (
+      selectedUf === '0' &&
+      selectedRegion !== '0' &&
+      selectedCity === '0'
+    ) {
       filteringCities = cities.filter(city => city.regiao === selectedRegion);
+    } else if (
+      selectedUf === '0' &&
+      selectedRegion === '0' &&
+      selectedCity !== '0'
+    ) {
+      filteringCities = cities.filter(
+        city => city.nome_cidade === selectedCity,
+      );
+    }
 
     return setFilteredCities(filteringCities);
   }
@@ -144,6 +194,16 @@ function Home() {
                   </option>
                 ))}
               </select>
+            </label>
+          </div>
+          <div className="field">
+            <label htmlFor="nome_cidade">
+              Cidade:
+              <input
+                type="text"
+                id="nome_cidade"
+                onChange={handleSelectedCity}
+              />
             </label>
           </div>
           <button type="button" onClick={handleFilter}>

@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="LogoLinx" src="./frontend/src/assets/logo.png" width="20%">
+</p>
+
 <h1 align="center"> 
 	Desafio Linx
 </h1>
@@ -21,7 +25,7 @@ Service: Regras de negócio e validações<br><br>
 
 O banco de dados utilizado foi Postgres, você irá precisar criar um banco local, para realizar a conexão utilize o arquivo na pasta config/database para configuração.<br><br>
 
-Você pode importar o arquivo .csv diretamente do frontend, como ainda não implementei a paginação todas as cidades aparecem na página "LISTAGEM", como o arquivo original possui muitas cidades, a aplicação tende a ficar lenta, deixei disponibilizado uma versão reduzida do .csv neste repositório.
+Você pode importar o arquivo .csv diretamente no frontend, na página IMPORTAR, como ainda não implementei a paginação todas as cidades aparecem na página "LISTAGEM", como o arquivo original possui muitas cidades, a aplicação tende a ficar lenta, deixei disponibilizado uma versão reduzida do .csv neste repositório.
 
 ## :information_source: Como usar?
 
@@ -62,7 +66,7 @@ $ yarn start
 ```
 
 
-## :bulb: Ideias para implementar / Ordem de prioridade
+## :bulb: Ideias de implementação
 - FrontEnd
   - [ ] Inserir mensagens Toast de sucesso e erro na pagina "CRIAR CIDADE"
   - [ ] Implementar paginação
@@ -70,8 +74,9 @@ $ yarn start
   - [ ] Implementar responsividade
 
 - BackEnd
-  - [ ] Implementação de queries para realizar os filtros das listagens. (Os filtros foram tratados no front)
-  - [ ] O tratamento de exções como um todo poderia ser melhorado. (Para evitar erros incomodos refiz as validações no front)
+  - [ ] Implementação de queries para realizar os filtros das listagens.
+  - [ ] O tratamento de exceções como um todo poderia ser melhorado.
   
-## OBS
-O requisito de filtro por parte do nome da cidade não foi implementado, inicialmente pensei em utilizar queries no banco com o operador like, essa solução se mostrou funcional porém tive uma certa dificuldade no envio dos query params do front pro back. Outra opção que encontrei foi utilizar uma expressão regex para filtrar diretamente no front mas não sou muito familiarizado com esse assunto então acabei por deixar sem essa implementação por agora. Estou enviando essa versão porque acredito já estar funcional e vou buscar implementar as ideias listadas acimas no decorrer do fim de semana.
+## Considerações
+** O requisito de filtro por parte do nome da cidade não cumpre completamente o que foi pedido. Inicialmente pensei em utilizar queries no banco com o operador like, essa solução se mostrou funcional porem tive uma certa dificuldade no envio dos query params do front pro back. Outra opção que encontrei foi utilizar uma expressão regex para filtrar diretamente no front mas não sou muito familiarizado com esse assunto. Construí então uma lógica mais simples aonde o filtro retorna caso o conteúdo digitado seja 100% igual ao nome da cidade registrado. A intenção é reestruturar a maneira como foi realizado os filtros e deixar essa lógica no backend, então essa funcionalidade iria ficar completa. 
+** A parte de importação está funcional porém quando importado um arquivo que incide em erros como ibge igual ou cidade e estado com o mesmo nome, ele se comporta de maneira correta não importando esses arquivos duplicados, porém, não retorna informação ao usuário (dando a sensação de que tudo ocorreu como deveria) e também o tratamento de erros no backend não está lidando muito bem com essa parte em especifico.
