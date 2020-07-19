@@ -1,6 +1,6 @@
-<p align="center">
+<h2 align="center">
   <img alt="LogoLinx" src="./frontend/src/assets/logo.png" width="20%">
-</p>
+</h2>
 
 <h1 align="center"> 
 	Desafio Linx
@@ -78,5 +78,5 @@ $ yarn start
   - [ ] O tratamento de exceções como um todo poderia ser melhorado.
   
 ## Considerações
-** O requisito de filtro por parte do nome da cidade não cumpre completamente o que foi pedido. Inicialmente pensei em utilizar queries no banco com o operador like, essa solução se mostrou funcional porem tive uma certa dificuldade no envio dos query params do front pro back. Outra opção que encontrei foi utilizar uma expressão regex para filtrar diretamente no front mas não sou muito familiarizado com esse assunto. Construí então uma lógica mais simples aonde o filtro retorna caso o conteúdo digitado seja 100% igual ao nome da cidade registrado. A intenção é reestruturar a maneira como foi realizado os filtros e deixar essa lógica no backend, então essa funcionalidade iria ficar completa. 
+** O requisito de filtro por parte do nome da cidade não cumpre completamente o que foi pedido. Inicialmente pensei em utilizar queries no banco com o operador like, essa solução se mostrou funcional porem tive uma certa dificuldade no envio dos query params do front pro back. Outra opção que encontrei foi utilizar uma expressão regex para filtrar diretamente no front mas não sou muito familiarizado com esse assunto. Construí então uma lógica mais simples aonde o filtro retorna caso o conteúdo digitado seja 100% igual ao nome da cidade registrado. A intenção é reestruturar a maneira como foi realizado os filtros e deixar essa lógica no backend, então essa funcionalidade iria ficar completa.<br>
 ** A parte de importação está funcional porém quando importado um arquivo que incide em erros como ibge igual ou cidade e estado com o mesmo nome, ele se comporta de maneira correta não importando esses arquivos duplicados, porém, não retorna informação ao usuário (dando a sensação de que tudo ocorreu como deveria) e também o tratamento de erros no backend não está lidando muito bem com essa parte em especifico.
