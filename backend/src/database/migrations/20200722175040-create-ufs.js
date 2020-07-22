@@ -2,11 +2,11 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('ufs', {
       id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
+        type: Sequelize.INTEGER,
         primaryKey: true,
-        unique: true,
+        autoIncrement: true,
         allowNull: false,
+        unique: true,
       },
       name: {
         type: Sequelize.STRING,

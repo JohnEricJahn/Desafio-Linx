@@ -1,12 +1,14 @@
-import { Model, DataTypes, Sequelize } from 'sequelize';
+import { Model, DataTypes } from 'sequelize';
 
-class UF extends Model {
+class Uf extends Model {
   static init(sequelize) {
     super.init(
       {
         id: {
-          type: DataTypes.UUID,
-          defaultValue: Sequelize.UUIDV4,
+          type: DataTypes.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
+          unique: true,
         },
         name: DataTypes.STRING,
       },
@@ -15,6 +17,10 @@ class UF extends Model {
       },
     );
   }
+
+  static associate(models) {
+    this.hasMany(models.City);
+  }
 }
 
-export default UF;
+export default Uf;

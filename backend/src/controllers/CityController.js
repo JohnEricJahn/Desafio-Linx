@@ -25,7 +25,7 @@ class UserController {
 
     const createNewCityService = new CreateNewCityService();
 
-    const city = await createNewCityService.execute(
+    await createNewCityService.execute(
       ibge,
       uf,
       nome_cidade,
@@ -34,7 +34,7 @@ class UserController {
       regiao,
     );
 
-    return res.status(200).json(city);
+    return res.status(200).send();
   }
 
   async import(req, res) {
