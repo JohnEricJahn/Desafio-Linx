@@ -19,7 +19,7 @@ class Uf extends Model {
   }
 
   static associate(models) {
-    this.hasMany(models.City);
+    this.hasMany(models.City, { foreignKey: 'uf_id' });
   }
 }
 

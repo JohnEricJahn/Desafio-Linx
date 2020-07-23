@@ -19,8 +19,8 @@ class City extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Uf, { foreignKey: 'uf_id', as: 'state' });
-    this.belongsTo(models.Region, { foreignKey: 'region_id', as: 'zone' });
+    this.belongsTo(models.Uf, { foreignKey: 'uf_id' });
+    this.belongsTo(models.Region, { foreignKey: 'region_id' });
   }
 }
 

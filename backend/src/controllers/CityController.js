@@ -1,21 +1,15 @@
-import City from '../models/City';
-
+import ListCitiesService from '../services/ListCitiesService';
 import CreateNewCityService from '../services/CreateNewCity';
 import DeleteCityService from '../services/DeleteCity';
 import ImportCitiesService from '../services/ImportCities';
 
 class UserController {
   async index(req, res) {
-    const listCities = await City.findAll({
-      attributes: [
-        'ibge',
-        'uf',
-        'nome_cidade',
-        'longitude',
-        'latitude',
-        'regiao',
-      ],
-    });
+    const { nome_cidade } = req.query;
+
+    const listCitiesService = new ListCitiesService();
+
+    const listCities = await listCitiesService.execute(nome_cidade);
 
     return res.json(listCities);
   }
