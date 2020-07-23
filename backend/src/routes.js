@@ -5,6 +5,7 @@ import uploadConfig from './config/upload';
 
 import cityController from './controllers/CityController';
 import ufController from './controllers/UfController';
+import RegionController from './controllers/RegionController';
 
 const upload = multer(uploadConfig);
 
@@ -16,5 +17,6 @@ routes.delete('/cities/:ibge', cityController.delete);
 routes.post('/cities/import', upload.single('file'), cityController.import);
 
 routes.get('/uf', ufController.index);
+routes.get('/region', RegionController.index);
 
 export default routes;

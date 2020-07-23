@@ -1,14 +1,14 @@
-import UF from '../models/Uf';
+import Uf from '../models/Uf';
 
 class UFController {
   async index(req, res) {
-    const listStates = await UF.findAll({
+    const listUfs = await Uf.findAll({
       attributes: ['name'],
     });
 
-    if (listStates.length === 0) return res.json('0');
+    if (listUfs.length === 0) return res.json('0');
 
-    return res.json(listStates);
+    return res.json(listUfs);
   }
 }
 
