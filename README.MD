@@ -1,8 +1,8 @@
-<p align="center">
-  <img alt="LogoLinx" src="./frontend/src/assets/logo.png" width="20%">
-</p>
+<h1 align="center"> 
+Desafio Linx
+</h1>
 
-<p align="center">	
+<p align="center">	  
   <a href="www.linkedin.com/in/john-eric-jahn">
     <img alt="Made by JohnEricJahn" src="https://img.shields.io/badge/made%20by-JohnEricJahn-brightgreen">
   </a>
