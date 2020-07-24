@@ -8,16 +8,19 @@ class City extends Model {
           type: DataTypes.INTEGER,
           primaryKey: true,
         },
-        uf: DataTypes.STRING,
         nome_cidade: DataTypes.STRING,
         longitude: DataTypes.STRING,
         latitude: DataTypes.STRING,
-        regiao: DataTypes.STRING,
       },
       {
         sequelize,
       },
     );
+  }
+
+  static associate(models) {
+    this.belongsTo(models.Uf, { foreignKey: 'uf_id' });
+    this.belongsTo(models.Region, { foreignKey: 'region_id' });
   }
 }
 

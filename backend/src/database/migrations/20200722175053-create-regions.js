@@ -1,23 +1,17 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('cities', {
-      ibge: {
+    return queryInterface.createTable('regions', {
+      id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
         unique: true,
-        allowNull: false,
       },
-      nome_cidade: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
-      },
-      longitude: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      latitude: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        unique: true,
       },
       created_at: {
         type: Sequelize.DATE,
@@ -30,5 +24,5 @@ module.exports = {
     });
   },
 
-  down: queryInterface => queryInterface.dropTable('cities'),
+  down: queryInterface => queryInterface.dropTable('regions'),
 };

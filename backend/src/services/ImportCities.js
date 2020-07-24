@@ -1,10 +1,13 @@
 import csvParse from 'csv-parse';
 import fs from 'fs';
+
 import City from '../models/City';
-import AppError from '../errors/AppError';
+import CreateNewCityService from './CreateNewCity';
 
 class ImportCitiesService {
   async execute(filePath) {
+    const createNewCityService = new CreateNewCityService();
+
     const citiesReadStream = fs.createReadStream(filePath);
 
     const parsers = csvParse({
@@ -27,7 +30,7 @@ class ImportCitiesService {
       ] = line.map(cell => cell.trim());
 
       if (!ibge || !uf || !nome_cidade || !longitude || !latitude || !regiao)
-        throw new AppError('You must to send all data.');
+        throw new Error('You must to send all data.');
 
       cities.push({ ibge, uf, nome_cidade, longitude, latitude, regiao });
     });
@@ -37,7 +40,30 @@ class ImportCitiesService {
     cities.map(async city => {
       const { ibge, uf, nome_cidade, longitude, latitude, regiao } = city;
 
-      await City.create({ ibge, uf, nome_cidade, longitude, latitude, regiao });
+      const checkCityWithSameIBGE = await City.findByPk(ibge);
+      if (checkCityWithSameIBGE) return;
+
+      const [uf_id, region_id] = await createNewCityService.checkingUfAndRegion(
+        uf,
+        regiao,
+      );
+
+      const checkCityWithTheSameName = await City.findAll({
+        where: {
+          nome_cidade,
+          uf_id,
+        },
+      });
+      if (checkCityWithTheSameName.length !== 0) return;
+
+      await createNewCityService.execute(
+        ibge,
+        nome_cidade,
+        uf_id,
+        longitude,
+        latitude,
+        region_id,
+      );
     });
 
     await fs.promises.unlink(filePath);
