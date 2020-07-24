@@ -9,7 +9,6 @@ class ListCitiesService {
 
     if (nome_cidade) {
       listCities = await City.findAll({
-        attributes: ['ibge', 'nome_cidade', 'longitude', 'latitude'],
         include: [
           {
             model: Uf,
@@ -22,7 +21,7 @@ class ListCitiesService {
         ],
         where: {
           nome_cidade: {
-            [Op.like]: `%${nome_cidade}%`,
+            [Op.iLike]: `%${nome_cidade}%`,
           },
         },
       });
@@ -31,7 +30,6 @@ class ListCitiesService {
     }
 
     listCities = await City.findAll({
-      attributes: ['ibge', 'nome_cidade', 'longitude', 'latitude'],
       include: [
         {
           model: Uf,

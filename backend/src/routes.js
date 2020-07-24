@@ -16,7 +16,7 @@ routes.post('/cities', cityController.store);
 routes.delete('/cities/:ibge', cityController.delete);
 routes.post('/cities/import', upload.single('file'), cityController.import);
 
-routes.get('/uf', ufController.index);
-routes.get('/region', RegionController.index);
+routes.get('/ufs', ufController.index);
+routes.get('/regions', RegionController.index);
 
 export default routes;
