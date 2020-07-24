@@ -8,11 +8,13 @@ import Header from '../../components/Header';
 import { Container, Filters, Wrapper, Reports } from './styles';
 
 function Relatórios() {
-  const [cities, setCities] = useState([]);
-  const [ufState, setUfState] = useState([]);
-  const [region, setRegion] = useState([]);
+  const [citiesList, setCitiesList] = useState([]);
+  const [ufsList, setUfsList] = useState([]);
+  const [regionsList, setRegionsList] = useState([]);
+
   const [selectedUf, setSelectedUf] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
+
   const [cityPerRegion, setCityPerRegion] = useState(0);
   const [cityPerUf, setCityPerUf] = useState(0);
 
@@ -22,27 +24,15 @@ function Relatórios() {
 
     async function loadStates() {
       try {
-        const response = await api.get('cities', { cancelToken: source.token });
-
-        const listCity = response.data;
-
-        const listUf = [];
-        const listRegion = [];
-
-        listCity.forEach(value => listUf.push(value.uf));
-        listCity.forEach(value => listRegion.push(value.regiao));
-
-        const filteredListUf = listUf.filter((value, index) => {
-          return listUf.indexOf(value) === index;
+        const listCity = await api.get('cities', { cancelToken: source.token });
+        const listUf = await api.get('ufs', { cancelToken: source.token });
+        const listRegion = await api.get('regions', {
+          cancelToken: source.token,
         });
 
-        const filteredListRegion = listRegion.filter((value, index) => {
-          return listRegion.indexOf(value) === index;
-        });
-
-        setCities(listCity);
-        setUfState(filteredListUf);
-        setRegion(filteredListRegion);
+        setCitiesList(listCity.data);
+        setUfsList(listUf.data);
+        setRegionsList(listRegion.data);
       } catch (err) {
         if (axios.isCancel(err)) {
           console.log('cancelled');
@@ -66,7 +56,7 @@ function Relatórios() {
 
     if (selectUf === '') return setCityPerUf(0);
 
-    const quantity = cities.filter(city => city.uf === selectUf);
+    const quantity = citiesList.filter(city => city.Uf.name === selectUf);
 
     return setCityPerUf(quantity.length);
   }
@@ -78,7 +68,9 @@ function Relatórios() {
 
     if (selectRegion === '') return setCityPerRegion(0);
 
-    const quantity = cities.filter(city => city.regiao === selectRegion);
+    const quantity = citiesList.filter(
+      city => city.Region.name === selectRegion,
+    );
 
     return setCityPerRegion(quantity.length);
   }
@@ -98,10 +90,10 @@ function Relatórios() {
                   onChange={handleSelectedUf}
                   value={selectedUf}
                 >
-                  <option value="">Selecione uma UF</option>
-                  {ufState.map((value, index) => (
-                    <option key={index} value={value}>
-                      {value}
+                  <option value="0">Selecione uma UF</option>
+                  {ufsList.map(({ id, name }) => (
+                    <option value={name} key={id}>
+                      {name}
                     </option>
                   ))}
                 </select>
@@ -116,10 +108,10 @@ function Relatórios() {
                   onChange={handleSelectedRegion}
                   value={selectedRegion}
                 >
-                  <option value="">Selecione uma região</option>
-                  {region.map((value, index) => (
-                    <option key={index} value={value}>
-                      {value}
+                  <option value="0">Selecione uma região</option>
+                  {regionsList.map(({ id, name }) => (
+                    <option value={name} key={id}>
+                      {name}
                     </option>
                   ))}
                 </select>
